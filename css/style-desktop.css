@@ -24,25 +24,25 @@
 
 	body, input, textarea
 	{
-		font-size: 14pt;
-		line-height: 1.75em;
+		/*font-size: 2em;*/
+		line-height: 1.4em;
 	}
 	
 	h1
 	{
-		font-size: 2.4em;
+		font-size: 2em;
 		letter-spacing: -0.015em;
 	}
 
 	h2
 	{
-		font-size: 1.8em;
+		font-size: 1.6em;
 		letter-spacing: -0.015em;
 	}
 	
 	h3, h4, h5, h6
 	{
-		font-size: 1.25em;
+		font-size: 1.2em;
 		letter-spacing: -0.015em;
 	}
 	
@@ -354,7 +354,7 @@
 				position: absolute;
 				left: 0;
 				top: 52.5%;
-				font-size: 1.5em;
+				font-size: 1.3em;
 				letter-spacing: -0.015em;
 				margin-top: 0;
 			}
@@ -453,6 +453,31 @@
 				letter-spacing: -0.015em;
 				margin-top: 0;
 			}*/
+
+	#publication h2
+	{
+
+		padding: 0 0 1em 0;
+	}
+	#publication p
+	{
+		/*padding: 2em 0 0 0;*/
+		text-align:justify;
+		/*background-color:#E4EFFF;
+		border:1px solid #9FC6FF;*/
+		padding:5px;
+		font-size: 1.0em;
+	}
+
+	#publicationImg
+	{
+		padding: 2em 0 0 0;
+	}
+
+	#publicationImg img
+	{
+		box-shadow: 1px 1px 12px #555;
+	}
 
 /*********************************************************************************/
 /* Footer                                                                        */
