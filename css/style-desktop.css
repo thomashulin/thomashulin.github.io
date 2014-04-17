@@ -123,7 +123,7 @@
 	#nav
 	{
 		text-align: center;
-		height: 4em;
+		height: 4.2em;
 		/*cursor: default;*/
 	}
 	
@@ -360,14 +360,36 @@
 			}
 			
 	/* Work */
+
+	#work
+	{
+		height: 20em;
+	}
 	
-		/*#work
+		#work img
 		{
-			padding: 0;
-			height: 20em;
+			/*box-shadow: 1px 1px 12px #555;*/
+			opacity: 0.35;
+			-moz-transition: opacity .25s ease-in-out;
+			-webkit-transition: opacity .25s ease-in-out;
+			-o-transition: opacity .25s ease-in-out;
+			-ms-transition: opacity .25s ease-in-out;
+			transition: opacity .25s ease-in-out;
 		}
-		
-			#work .pic
+		#work .video01
+		{
+			position: absolute;
+			right: 5%;
+			
+
+		}
+
+		#work img:hover
+		{
+			opacity: 1.0;
+
+		}
+			/*#work .pic
 			{
 				display: block;
 				position: absolute;
