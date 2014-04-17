@@ -123,8 +123,8 @@
 	#nav
 	{
 		text-align: center;
-		height: 4.25em;
-		cursor: default;
+		height: 4em;
+		/*cursor: default;*/
 	}
 	
 		#nav a
