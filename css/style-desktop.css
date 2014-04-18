@@ -376,40 +376,60 @@
 			-ms-transition: opacity .25s ease-in-out;
 			transition: opacity .25s ease-in-out;
 		}
-		#work .video01
+
+/*********************************************************************************/
+/* Work block                                                                        */
+/*********************************************************************************/
+
+		/* Right */
+
+		#work .workBlockRight
 		{
-			position: absolute;
-			right: 5%;
+			display: block;
 		}
 
-		#work .video02
+		#work .workBlockRight .text
 		{
-			position: absolute;
-			top: 16em;
-			left: 5%;
+			width: 27em;
+			margin-top: 0em;
+			float: left;
 		}
 
-		#work .video03
+		#work .workBlockRight p
 		{
-			position: absolute;
-			top: 26em;
-			right: 5%;
-
+			margin-top: 1em;
 		}
 
-		#work .video04
+		#work .workBlockRight .video
 		{
-			position: absolute;
-			left: 5%;
-			top: 36em;
+			float:right;
 		}
 
-		#work .video05
+		/* Left */
+
+		#work .workBlockLeft
 		{
-			position: absolute;
-			right: 5%;
-			top: 46em;
+			display: block;
 		}
+
+		#work .workBlockLeft .text
+		{
+			width: 27em;
+			margin-top: 0em;
+			float: right;
+		}
+
+		#work .workBlockLeft p
+		{
+			margin-top: 1em;
+		}
+
+		#work .workBlockLeft .video
+		{
+			float: left;
+		}
+
+
 
 		#work img:hover
 		{
