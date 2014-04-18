@@ -391,6 +391,7 @@
 		#work .workBlockRight .text
 		{
 			width: 27em;
+			height: 10em;
 			margin-top: 0em;
 			float: left;
 		}
@@ -415,6 +416,7 @@
 		#work .workBlockLeft .text
 		{
 			width: 27em;
+			height: 10em;
 			margin-top: 0em;
 			float: right;
 		}
