@@ -363,7 +363,7 @@
 
 	#work
 	{
-		height: 20em;
+		height: 60em;
 	}
 	
 		#work img
@@ -380,8 +380,35 @@
 		{
 			position: absolute;
 			right: 5%;
-			
+		}
 
+		#work .video02
+		{
+			position: absolute;
+			top: 16em;
+			left: 5%;
+		}
+
+		#work .video03
+		{
+			position: absolute;
+			top: 26em;
+			right: 5%;
+
+		}
+
+		#work .video04
+		{
+			position: absolute;
+			left: 5%;
+			top: 36em;
+		}
+
+		#work .video05
+		{
+			position: absolute;
+			right: 5%;
+			top: 46em;
 		}
 
 		#work img:hover
