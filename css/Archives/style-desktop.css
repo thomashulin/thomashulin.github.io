@@ -87,12 +87,11 @@
 			padding: 0.5em 1.25em 0.5em 1.25em;
 		}
 
-	/*.byline
+	.byline
 	{
-		font-size: small;
 		margin: 0 10em 0 0;
 		color: #aaa;
-	}*/
+	}
 
 	.is-gallery
 	{
@@ -218,7 +217,7 @@
 
 
 /*********************************************************************************/
-/* Lang                                                                          */
+/* Lang                                                                        */
 /*********************************************************************************/
 
 	#lang
@@ -266,17 +265,15 @@
 		width: 45em;
 	}
 	
-/*********************************************************************************/
-/* Home                                                                          */
-/*********************************************************************************/
+	/* Me */
 	
-		#home
+		#me
 		{
 			padding: 0;
 			height: 20em;
 		}
 		
-			#home .pic
+			#me .pic
 			{
 				display: block;
 				position: absolute;
@@ -286,14 +283,14 @@
 				text-decoration: none;
 			}
 			
-				#home .pic img
+				#me .pic img
 				{
 					position: relative;
 					display: block;
 					height: 100%;
 				}
 			
-				#home .pic .arrow
+				#me .pic .arrow
 				{
 					display: block;
 					position: absolute;
@@ -316,26 +313,26 @@
 					transition: width .15s ease-in-out, padding-right .15s ease-in-out;
 				}
 
-					#home .pic .arrow:before
+					#me .pic .arrow:before
 					{
 						position: relative;
 						padding-right: 0;
 						top: 0.125em;
 					}
 			
-					#home .pic .arrow span
+					#me .pic .arrow span
 					{
 						display: block;
 						text-indent: -9999px;
 					}
 				
-					#home .pic:hover .arrow
+					#me .pic:hover .arrow
 					{
 						width: 3em;
 						padding-right: 0.25em;
 					}
 			
-			#home header
+			#me header
 			{
 				position: absolute;
 				left: 0;
@@ -345,7 +342,7 @@
 				margin-left: 2.5em;
 			}
 			
-			#home h1
+			#me h1
 			{
 				position: absolute;
 				left: 0;
@@ -353,106 +350,212 @@
 				margin: 0;
 			}
 			
-			#home .byline
+			#me .byline
 			{
 				position: absolute;
 				left: 0;
 				top: 52.5%;
-				font-size: 1.2em;
+				font-size: 1.5em;
 				letter-spacing: -0.015em;
 				margin-top: 0;
-				margin: 0 10em 0 0;
-				color: #aaa;
 			}
 			
-/*********************************************************************************/
-/* Works                                                                         */
-/*********************************************************************************/
+	/* Work */
 
 	#work
 	{
-
+		/*padding: 0;
+		/*height: 60em;*/
+		
 	}
+	
+		#work .workBlockRight .video img
+		{
+			/*box-shadow: 1px 1px 12px #555;*/
+			opacity: 0.35;
+			-moz-transition: opacity .25s ease-in-out;
+			-webkit-transition: opacity .25s ease-in-out;
+			-o-transition: opacity .25s ease-in-out;
+			-ms-transition: opacity .25s ease-in-out;
+			transition: opacity .25s ease-in-out;
+		}
+		
+		#work .workBlockRight .video img:hover
+		{
+			opacity: 1;
+		}
+
+/*********************************************************************************/
+/* Work block                                                                        */
+/*********************************************************************************/
+
+		/* Right */
+
+		/*#work .workBlockRight
+		{
+			display: block;
+		}
+
+		#work .workBlockRight .text
+		{
+			width: 27em;
+			height: 10em;
+			margin-top: 0em;
+			float: left;
+		}
+
+		#work .workBlockRight p
+		{
+			margin-top: 1em;
+		}
+
+		#work .workBlockRight .video
+		{
+			float:right;
+		}*/
+		
+		#work .separator
+		{
+			padding: 1;
+		}
+		
+		#work .workBlockRight
+		{
+			height:100%;
+			width:100%;
+			font-size: 16px;
+			float:right;
+			margin: 1em 0 0 0;
+			padding: 0 0 1em 0;
+			
+		}
+		
+		#work .workBlockRight .video
+		{
+			padding: 0;
+			float: right;
+			margin: -10px 0 0 5px;
+			clear:right;
+		}
+
+		/* Left */
+
+		/*#work .workBlockLeft
+		{
+			display: block;
+		}
+
+		#work .workBlockLeft .text
+		{
+			width: 27em;
+			height: 10em;
+			margin-top: 0em;
+			float: right;
+		}
+
+		#work .workBlockLeft p
+		{
+			margin-top: 1em;
+		}
+
+		#work .workBlockLeft .video
+		{
+			float: left;
+		}*/
+
+
 
 		#work img:hover
 		{
 			opacity: 1.0;
 
 		}
-
-		#work a
-		{
-			text-decoration:none;
-			color: #81BEF7;
-		}
-
-		#work .separator
-		{
-			padding: 1;
-		}
-
-		#work .block
-		{
-			height:100%;
-			width:100%;
-			font-size: 0.7em;
-			float:right;
-			margin: 1em 0 0 0;
-			padding: 0 0 1em 0;
-		}
-
-		#work h3
-		{
-			font-size: 1.1em;
-			padding: 1em 0 1em 0;
-		}
-
-		#work p
-		{
-			text-indent:1em;
-			line-height:1.2em;
-			text-align:justify;
-			padding: 0 20em 0 0;
-		}
-
-
-			#work .block .video
+			/*#work .pic
 			{
-				padding: 0;
-				float: right;
-				margin: -10px 0 0 5px;
-				clear:right;
-			}
-		
-			#work .block .video img
-			{
-				/*box-shadow: 1px 1px 12px #555;*/
-				opacity: 0.35;
-				-moz-transition: opacity .25s ease-in-out;
-				-webkit-transition: opacity .25s ease-in-out;
-				-o-transition: opacity .25s ease-in-out;
-				-ms-transition: opacity .25s ease-in-out;
-				transition: opacity .25s ease-in-out;
+				display: block;
+				position: absolute;
+				right: -1px;
+				top: 0;
+				height: 100%;
+				text-decoration: none;
 			}
 			
-			#work .block .video img:hover
+				#work .pic img
+				{
+					position: relative;
+					display: block;
+					height: 100%;
+				}
+			
+				#work .pic .arrow
+				{
+					display: block;
+					position: absolute;
+					right: 0;
+					top: 50%;
+					margin-top: -1.375em;
+					width: 2.75em;
+					height: 2.75em;
+					background: #000;
+					background: rgba(0,0,0,0.75);
+					color: #fff;
+					text-align: center;
+					line-height: 2.75em;
+					font-size: 1.5em;
+					z-index: 1;
+					-moz-transition: width .15s ease-in-out, padding-right .15s ease-in-out;
+					-webkit-transition: width .15s ease-in-out, padding-right .15s ease-in-out;
+					-o-transition: width .15s ease-in-out, padding-right .15s ease-in-out;
+					-ms-transition: width .15s ease-in-out, padding-right .15s ease-in-out;
+					transition: width .15s ease-in-out, padding-right .15s ease-in-out;
+				}
+
+					#work .pic .arrow:before
+					{
+						position: relative;
+						padding-right: 0;
+						top: 0.125em;
+					}
+			
+					#work .pic .arrow span
+					{
+						display: block;
+						text-indent: -9999px;
+					}
+				
+					#work .pic:hover .arrow
+					{
+						width: 3em;
+						padding-right: 0.25em;
+					}
+			
+			#work header
 			{
-				opacity: 1;
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				margin-left: 2.5em;
 			}
-
-/*********************************************************************************/
-/* Publication                                                                   */
-/*********************************************************************************/
-
-	#publication
-	{
-		height:100%;
-		width:100%;
-		font-size: 16px;
-		float:right;
-		margin: 1em 0 0 0;
-		padding: 0 0 1em 0;
-	}
+			
+			#work h1
+			{
+				position: absolute;
+				left: 0;
+				bottom: 52.5%;
+				margin: 0;
+			}
+			
+			#work .byline
+			{
+				position: absolute;
+				left: 0;
+				top: 52.5%;
+				font-size: 1.5em;
+				letter-spacing: -0.015em;
+				margin-top: 0;
+			}*/
 
 	#publication h2
 	{
@@ -462,11 +565,11 @@
 	#publication p
 	{
 		/*padding: 2em 0 0 0;*/
-		/*text-align:justify;
-		background-color:#E4EFFF;
-		border:1px solid #9FC6FF;
+		text-align:justify;
+		/*background-color:#E4EFFF;
+		border:1px solid #9FC6FF;*/
 		padding:5px;
-		font-size: 1.0em;*/
+		font-size: 1.0em;
 	}
 	#publicationImg
 	{
