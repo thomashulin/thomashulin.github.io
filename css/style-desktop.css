@@ -467,10 +467,10 @@
 		color: #81BEF7;
 	}
 
-	#publication .block #separator
+	#publication #separator
 	{
 		text-align: center;
-		padding: 0 0 2em 0;
+		padding: 0 0 0 0;
 	}
 
 	#publication .block
