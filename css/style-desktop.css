@@ -447,36 +447,134 @@
 
 	#publication
 	{
-		height:100%;
-		width:100%;
-		font-size: 16px;
-		float:right;
-		margin: 1em 0 0 0;
-		padding: 0 0 1em 0;
+
 	}
 
 	#publication h2
 	{
-
 		padding: 0 0 1em 0;
 	}
-	#publication p
+
+	#publication h3
 	{
-		/*padding: 2em 0 0 0;*/
-		/*text-align:justify;
-		background-color:#E4EFFF;
-		border:1px solid #9FC6FF;
-		padding:5px;
-		font-size: 1.0em;*/
-	}
-	#publicationImg
-	{
-		padding: 2em 0 0 0;
+		padding: 1em 0 1em 0;
 	}
 
-	#publicationImg img
+	#publication a
 	{
-		box-shadow: 1px 1px 12px #555;
+		text-decoration:none;
+		color: #81BEF7;
+	}
+
+	#publication .block #separator
+	{
+		padding: 0 0 2em 0;
+	}
+
+	#publication .block
+	{
+		color: #2E2E2E;
+		display:block;
+		height:100%;
+		width:100%;
+		float:left;
+		margin: 1em 0 0 0;
+	}
+
+			#publication .block .img
+			{
+				display:inline-block;
+				float: left;
+				box-shadow: 1px 1px 1em #555;
+				clear: right;
+			}
+
+			#publication .block .text
+			{
+				display:inline-block;
+				float: right;
+				text-align:justify;
+				width: 75%;
+			}
+
+	#publication p
+	{
+		font-size: 0.7em;
+		color: #2E2E2E;
+	}
+
+/*********************************************************************************/
+/* About                                                                     */
+/*********************************************************************************/
+
+	#about #map_canvas
+	{
+		margin: 2em 0 0 0;
+		float: right;
+	  	width: 40%;
+	  	height: 250px;
+	  	border: 1px solid #2E2E2E;
+	  	/*box-shadow: 1px 1px 1em #555;*/
+	}
+
+	#about #site
+	{
+		float: left;
+		width: 30%;
+		margin: 2em 0 0 10em;
+		font-size: 0.7em;
+	}
+
+	#about #site h5
+	{
+		margin: 0 0 1em 0;
+	}
+
+	#about #site li
+	{
+		display: list-item;
+		list-style-type: circle;
+	}
+
+	#about h2
+	{
+		padding: 0 0 1em 0;
+	}
+
+	#publication #separator
+	{
+		padding: 0 0 1em 0;
+	}
+
+	#about #me
+	{
+		text-indent:1em;
+		float: right;
+		width: 75%;
+		margin-top: 1em;
+		text-align: justify;
+		font-size: 0.7em;
+		color: #2E2E2E;
+		line-height:1.2em;
+		margin: 3em 0 0 0;
+	}
+
+	#about #cv
+	{
+		float: left;
+		margin: 2em 0 0 0;
+		box-shadow: 1px 1px 1em #555;
+	}
+
+	#about a
+	{
+		text-decoration:none;
+		color: #81BEF7;
+	}
+
+	#about b
+	{
+		font-weight: bold; 
 	}
 
 /*********************************************************************************/

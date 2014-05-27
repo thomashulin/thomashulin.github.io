@@ -10,6 +10,28 @@
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
+
+		<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+		<script>
+		    function initialize() {
+		        var map_canvas = document.getElementById("map_canvas");
+		        var map_options = {
+		        	center: new google.maps.LatLng(44.8123675, -0.5829484),
+		          	zoom:  12,
+		         	mapTypeId: google.maps.MapTypeId.ROADMAP
+		        }
+		        var map = new google.maps.Map(map_canvas, map_options)
+
+		        var marker = new google.maps.Marker({
+				    position: new google.maps.LatLng(44.8123675, -0.5829484),
+				    map: map,
+				    title:"Hello World!"});
+
+		        marker.setMap(map);
+		      }
+		    google.maps.event.addDomListener(window, 'load', initialize);
+		</script>
+
 		<!--<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet" />-->
 		<script type="text/javascript" src="js/jquery.min.js"></script>
 		<script type="text/javascript" src="js/skel.min.js"></script>
@@ -95,7 +117,7 @@
 								<h3>Navidget, Technique de Navigation 3D pour périphériques 2D</h3>
 								<div class='block'>
 									<div class='video'>
-									    <a href='http://player.vimeo.com/video/92330145?autoplay=1' 
+									   <a href='http://player.vimeo.com/video/92330145?autoplay=1'
 											 class='lightview'
 											 data-lightview-type="iframe"
 											 data-lightview-options="
@@ -166,7 +188,7 @@
 											 <img src="images/thumbnails/2dto3d.png" alt=""/>
 										</a>
 									</div>
-									<p>Ici sont présentées plusieurs idées afin de faciliter la compréhension et de limiter la surcharge cognitive lors de la transition d'une carte 2D vers un environnement virtuel 3D urbain.</p>
+									<p>Ici sont présentées plusieurs idées afin de faciliter la compréhension et de limiter la charge cognitive lors de la transition d'une carte 2D vers un environnement virtuel 3D urbain.</p>
 									<p>Y sont présenter notamment le <i>Mantra</i>, une fenêtre permettant de prévisualiser les points importants avant d'effectuer la transition. Mais aussi les <i>Growing Buildings</i>, permettant un allégement des données 3D de façon momentané, afin de mieux situer les points de repère durant la transition.</p>
 								</div>
 							</article>
@@ -177,60 +199,69 @@
 								<h2>Publication</h2>
 
 								<p>
-									Ici se trouvent mes publications reliées au sujet de l'intéraction Homme-Machine, réalisées dans le cadre des activités de l'équipe de recheche <a href="https://team.inria.fr/potioc/fr/">Potioc</a> à <a href="http://www.inria.fr/centre/bordeaux">INRIA Bordeaux Sud-Ouest</a> (Institut national de recherche en informatique et en automatique).
+									Ici se trouvent mes publications reliées au sujet de l'intéraction Homme-Machine, réalisées dans le cadre des activités de l'équipe de recheche <a href="https://team.inria.fr/potioc/fr/">Potioc</a> à <a href="http://www.inria.fr/centre/bordeaux">INRIA Bordeaux Sud-Ouest</a>.
 								</p>
 
-								<h3>Conférence</h3>
-								<div id="publicationImg">
-									<a href="papers/3DUI2014.pdf"><img src="images/papers/3DUI2014.png" alt=""></a>
+								<h3>Articles &amp; Conférences</h3>
+								
+								<div class="block">
+									<img id="separator" src="images/separator.png" alt=""/>
+									<div class="img">
+										<a href="papers/3DUI2014.pdf"><img src="images/papers/3DUI2014.png" alt=""></a>
+									</div>
+									<div class="text">
+									<p>Nous avons mené une étude utilisateurs, visant à caractériser en termes d'efficatité et d'utilisabilité, les différentes techniques d'interaction couramment utilisées en environnement virtuel 3D urbain, sur mobiles tactiles.
+									Cette étude à concisté à comparer quatre approches, à savoir : Le Go-To, les Joysticks virtuels, le Slide-Grab et enfin une technique basée sur une navigation nodale.</p>
+									<p>Les résultats suggèrent le Go-To comme étant la technique de navigation la plus performante. Les commentaires des utilisateurs non experts tendent à également promouvoir le Go-To en terme de facilité d'utilisation, alors que les utilisateurs experts semblent éprouver plus de facilité avec l'approche à base de Joysticks virtuels.</p>
+									<p><a href="http://thomashulin.github.io/papers/3DUI2014.pdf">Article</a> et vidéo publiés lors du <b><i>9th International IEEE Symposium on 3D User Interfaces</i></b> (<a href="http://3dui.org/">3DUI'14</a>), Minneapolis, USA, 2014.</p>
+									<p>Le logiciel ayant été développé pour cette étude est disponible sur notre site <a href="http://3dit.bordeaux.inria.fr/content.html">3DIT</a>.</p>
+									</div>
 								</div>
-								<div id="publicationImg">
-									<a href="papers/StateOfArt2012.pdf"><img src="images/papers/StateOfArt.png" alt=""></a>
+								<div class="block">
+									<img id="separator" src="images/separator.png" alt=""/>
+									<div class="img">
+										<a href="papers/3DNavSurvey.pdf"><img src="images/papers/StateOfArt.png" alt=""></a>
+									</div>
+									<div class="text">
+									<p>Ce document fait état des techniques d'interaction les plus usitées dans des environnements virtuels 3D urbains. Il a été rédigé en fin d'année de Master 2, dans le cadre d'un stage réalisé au sein de l'équipe <a href="https://team.inria.fr/potioc/fr/">Potioc</a> à <a href="http://www.inria.fr/centre/bordeaux">INRIA Bordeaux Sud-Ouest</a>. On y retrouve, en premier lieu, un résumé rapide visant à expliquer ce qu'est une technique d'interaction 3D. Avec notamment des précisions sur les composantes motrice et cognitive nécaisserent au bon fonctionne de cette dernière.</p>
+									<p>S'en suit une liste décrivant chacune des différentes techniques étudiées, avec le détail de leurs fonctionnements.</p>
+									<p>Enfin, ce document se clôture sur une analyse succinte visant à extraire les méthodes récurrentes et points communs rencontrés.</p>
+									</div>
 								</div>
-
 							</article>
 
 							<!-- About -->
 							<article id="about" class="panel">
 								<h2>À Propos</h2>
+								<img id="separator" src="images/separator.png" alt=""/>
+								<div id="me">
+									<p>Je m'appelle <a href="papers/cv-thulin.pdf">Thomas Hulin</a>, je suis aujourd'hui <b>ingénieur de recherche</b> dans l'équipe <a href="https://team.inria.fr/potioc/fr/">Potioc</a>, d'<a href="http://www.inria.fr/centre/bordeaux">INRIA Bordeaux Sud-Ouest</a>. Cette équipe a pour sujet central l'interaction entre l'Homme et la Machine, et plus particulièrement l'interaction dans le cadre d'environnement virtuel 3D. J'interviens actuellement comme ingénieur, pour le maintient et développement d'applications 3D, mais également comme chercheur, dans le but d'apporter des solutions nouvelles à des problèmes rencontrés en matière d'interaction et d'affichage 3D.</p>
 
+									<p>Je me suis découvert cette passion pour le <b><i>computer graphics</i></b> au fil des années.  Initialement en IUT génie mécanique, puis banquier, j'ai finalement décidé de reprendre mes études afin de devenir un professionnel dans cette branche spécifique de l'informatique. Aujourd'hui titulaire d'un <b>Master 2 Informatique</b> avec Mention, <b>spécialité Image 3D</b>, j'entends continuer à monter en compétence dans ce domaine qui sucite chez moi tant d'intéret.</p>
+								</div>
+								<div id='cv'><a href="papers/cv-thulin.pdf"><img src="images/papers/cv-thulin-thumb.jpg" alt=""></a></div>
+								<img id="separator" src="images/separator.png" alt=""/>
+								<div id="map_canvas"></div>
+								<div id="site">
+									<h5>Actuellement</h5>
+									<ul>
+										<li>75 Rue Bourges
+											<br>Résidence CHIRICO, Appt 17
+											<br>33400 Talence, France</li>
+									</ul>
+									<h5>Lieux précédents</h5>
+									<ul>
+										<li>Paris 12e arrondissement (75), France
+										<li>St Quentin (02), France
+										<li>Reims (51), France
+									</ul>
 
+									<h5>Me contacter</h5>
+									<ul>
+										<li><font color="#81BEF7">thomashulin.pro@gmail.com</font>
+									</ul>
+								</div>
 							</article>
-
-						<!-- Email 
-							<article id="email" class="panel">
-								<header>
-									<h2>Email Me</h2>
-								</header>
-								<form action="#" method="post">
-									<div>
-										<div class="row half">
-											<div class="6u">
-												<input type="text" class="text" name="name" placeholder="Name" />
-											</div>
-											<div class="6u">
-												<input type="text" class="text" name="email" placeholder="Email" />
-											</div>
-										</div>
-										<div class="row half">
-											<div class="12u">
-												<input type="text" class="text" name="subject" placeholder="Subject" />
-											</div>
-										</div>
-										<div class="row half">
-											<div class="12u">
-												<textarea name="message" placeholder="Message"></textarea>
-											</div>
-										</div>
-										<div class="row">
-											<div class="12u">
-												<input type="submit" class="button" value="Send Message" />
-											</div>
-										</div>
-									</div>
-								</form>
-							</article>-->
-
 					</div>
 		
 				<!-- Footer -->
