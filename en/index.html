@@ -1,28 +1,51 @@
-<!DOCTYPE HTML>
-<!--
-	Astral 2.5 by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<!--
-	ENGLISH VERSION
--->
 <html>
 	<head>
 		<title>Thomas Hulin</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
-		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet" />
-		<script src="../js/jquery.min.js"></script>
-		<script src="../js/skel.min.js"></script>
-		<script src="../js/init.js"></script>
+
+		<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+		<script>
+		    function initialize() {
+		        var map_canvas = document.getElementById("map_canvas");
+		        var map_options = {
+		        	center: new google.maps.LatLng(44.8123675, -0.5829484),
+		          	zoom:  12,
+		         	mapTypeId: google.maps.MapTypeId.ROADMAP
+		        }
+		        var map = new google.maps.Map(map_canvas, map_options)
+
+		        var marker = new google.maps.Marker({
+				    position: new google.maps.LatLng(44.8123675, -0.5829484),
+				    map: map,
+				    title:"75 Rue Bourges, Résidence CHIRICO, 33400 Talence"});
+
+		        marker.setMap(map);
+		      }
+		    google.maps.event.addDomListener(window, 'load', initialize);
+		</script>
+
+		<!--<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet" />-->
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/skel.min.js"></script>
+		<script type="text/javascript" src="../js/init.js"></script>
+
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+		<!--[if lt IE 9]>
+		  <script type="text/javascript" src="../js/excanvas/excanvas.js"></script>
+		<![endif]-->
+		<script type="text/javascript" src="../js/spinners/spinners.min.js"></script>
+		<script type="text/javascript" src="../js/lightview/lightview.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="css/lightview/lightview.css" />
+
 		<noscript>
 			<link rel="stylesheet" href="css/skel-noscript.css" />
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-desktop.css" />
 			<link rel="stylesheet" href="css/noscript.css" />
-			<link rel="stylesheet" type="text/css" href="/css/lightview/lightview.css"/>
 		</noscript>
 		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
 	</head>
@@ -36,9 +59,9 @@
 					</div>
 				<!-- Nav -->
 					<nav id="nav">
-						<a href="#me" class="fa fa-home active"><span>Home</span></a>
+						<a href="#home" class="fa fa-home active"><span>Home</span></a>
 						<a href="#work" class="fa fa-folder"><span>Works</span></a>
-						<a href="#publication" class="fa fa-file"><span>Publication</span></a>
+						<a href="#publication" class="fa fa-file"><span>Publications</span></a>
 						<a href="#about" class="fa fa-user"><span>About Me</span></a>
 					</nav>
 
@@ -46,14 +69,14 @@
 					<div id="main">
 						
 						<!-- Me -->
-							<article id="me" class="panel">
+							<article id="home" class="panel">
 								<header>
 									<h1>Thomas Hulin</h1>
-									<span class="byline">3D Software Engineer</span>
+									<span class="byline">3D Research and Software Engineer</span>
 								</header>
 								<a href="#work" class="jumplink pic">
-									<span class="jumplink arrow fa fa-chevron-right"><span>Works</span></span>
-									<img src="../images/me2.jpg" alt="" />
+									<span class="jumplink arrow fa fa-chevron-right"></span>
+									<img src="../images/me.jpg" alt="" />
 								</a>
 							</article>
 
@@ -62,128 +85,195 @@
 								<header>
 									<h2>Works</h2>
 								</header>
-								<!--<a href="#publication" class="jumplink pic">
-									<span class="jumplink arrow fa fa-chevron-right"><span>Publication</span></span>
-								</a>-->
-								<!--<p>
-									Phasellus enim sapien, blandit ullamcorper elementum eu, condimentum eu elit. 
-									Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia 
-									luctus elit eget interdum.
-								</p>
+								<div id="separator"><img src="../images/separator.png" alt=""/></div>
+								<h3>Étude de Techniques de Navigation en Environnement Virtuel 3D Urbain pour Mobiles Tactiles</h3>
+								<div class='block'>
+									<div class='video'>
+									    <a href='http://player.vimeo.com/video/92243287?autoplay=1' 
+											 class='lightview'
+											 data-lightview-type="iframe"
+											 data-lightview-options="
+												 width: 864, 
+												 height: 480, 
+												 viewport: 'scale'"
+											 data-lightview-title="Étude de Techniques de Navigation en Environnement Virtuel 3D Urbain pour Mobiles Tactiles" 
+											 data-lightview-caption="">
+											 <img src="../images/thumbnails/0.png" alt=""/>
+										</a>
+									</div>
+									<p>Nous avons mené une étude utilisateurs, visant à caractériser en termes d'efficatité et d'utilisabilité, les différentes techniques d'interaction couramment utilisées en environnement virtuel 3D urbain, sur mobiles tactiles.
+									Cette étude à concisté à comparer quatre approches, à savoir : Le Go-To, les Joysticks virtuels, le Slide-Grab et enfin une technique basée sur une navigation nodale.</p>
+									<p>Les résultats suggèrent le Go-To comme étant la technique de navigation la plus performante. Les commentaires des utilisateurs non experts tendent à également promouvoir le Go-To en terme de facilité d'utilisation, alors que les utilisateurs experts semblent éprouver plus de facilité avec l'approche à base de Joysticks virtuels.</p>
+									<p><a href="http://thomashulin.github.io/papers/3DUI2014.pdf">Article</a> et vidéo publiés lors du <b><i>9th International IEEE Symposium on 3D User Interfaces</i></b> (<a href="http://3dui.org/">3DUI'14</a>), Minneapolis, USA, 2014.</p>
+									<p>Le logiciel ayant été développé pour cette étude est disponible sur notre site <a href="http://3dit.bordeaux.inria.fr/content.html">3DIT</a>.</p>
+								</div>
+								<div id="separator"><img src="../images/separator.png" alt=""/></div>
+								<h3>Navidget, Technique de Navigation 3D pour périphériques 2D</h3>
+								<div class='block'>
+									<div class='video'>
+									   <a href='http://player.vimeo.com/video/92330145?autoplay=1'
+											 class='lightview'
+											 data-lightview-type="iframe"
+											 data-lightview-options="
+												 width: 864, 
+												 height: 480, 
+												 viewport: 'scale'"
+											 data-lightview-title="Navidget, Technique de Navigation 3D pour périphériques 2D" 
+											 data-lightview-caption="">
+											 <img src="../images/thumbnails/1.png" alt=""/>
+										</a>
+									</div>
+									<p>Navidget est une nouvelle technique d’interaction permettant de positionner la caméra dans des environnements virtuels 3D. Développée au sein de l'équipe <a href="https://team.inria.fr/potioc/fr/">Potioc</a>, d'<a href="http://www.inria.fr/centre/bordeaux">INRIA Bordeaux Sud-Ouest</a>, cette technique fournit des retours visuels adaptés permettant un contrôle facile et rapide du positionnement de la caméra.</p>
 
+									<p>Cette nouvelle interface 3D est totalement basée sur des périphériques d'entrée 2D. Le système peut ainsi être utilisé sur un large panel de dispositifs, allant de petits formats tels que les smartphones, aux bien plus grand tels que les écrans géants. Les résultats d'une étude utilisateur réalisée sur Tablette PC, montre Navidget comme étant une technique d'interaction facile d'utilisation, aussi bien pour les novices que les experts.</><p>Elle s'adapte également très bien aux travaux collaboratifs.</p>
+								</div>
+								<div id="separator"><img src="../images/separator.png" alt=""/></div>
+								<!--<h3>CityBird, a Tool for Easy Trajectories Creation in 3D Virtual Cities</h3>-->
+								<h3>CityBird, un Outil pour Faciliter la Création de Trajectoires en Environnement Virtuel 3D Urbain</h3>
+								<div class='block'>
+									<div class='video'>
+									    <a href='http://player.vimeo.com/video/96183336?autoplay=1' 
+											 class='lightview'
+											 data-lightview-type="iframe"
+											 data-lightview-options="
+												 width: 864, 
+												 height: 480, 
+												 viewport: 'scale'"
+											 data-lightview-title="Navigation" 
+											 data-lightview-caption="Lightview has mobile-friendly side buttons and pagination for easy navigation.">
+											 <img src="../images/thumbnails/btools.png" alt=""/>
+										</a>
+									</div>
+									<p>CityBird est un outil conçu dans le but de créer rapidement et très simplement des trajectoires dans des environnements virtuels 3D urbains. Encore au stade du prototype, celui-ci fut développé afin de répondre à une demande faite dans le cadre d'un projet national nommé Ville Transparente, et faisant intervenir trois acteurs majeurs, à savoir <a href="http://fr.mappy.com/">Mappy</a>, filiale de <a href="http://www.solocalgroup.com/">Solocal Group</a>, <a href="http://www.vectuel.com/">Vectuel</a> et l'équipe <a href="https://team.inria.fr/potioc/fr/">Potioc</a> d'<a href="http://www.inria.fr/centre/bordeaux">INRIA Bordeaux Sud-Ouest</a>. Son principal but est de permettre de confectionner des visites guidées à même le modèle 3D d'une ville. Ainsi, il est possible en quelques cliques, de s'inventer des courbes relativements complexes, pour s'y faire se mouvoir divers objets 3D.</p>
 
-								<!--<section class="is-gallery">
-									<div class="row half">
-										<div class="4u">
-											<a href="http://flypixel.com/knob/3495684098026313" class="image image-full"><img src="images/1.jpg" alt=""></a>
-										</div>
-										<div class="4u">
-											<a href="http://flypixel.com/contact-login-form/8829734266026310" class="image image-full"><img src="images/2.jpg" alt=""></a>
-										</div>
-										<div class="4u">
-											<a href="http://flypixel.com/wallpaper-pack/3755398966026313" class="image image-full"><img src="images/3.jpg" alt=""></a>
-										</div>
+									<p>Ce prototype est basé sur les célébres <a href="http://fr.wikipedia.org/wiki/Courbe_de_B%C3%A9zier">courbes de Bezier</a>, et peut se voir facilement étendre à d'autres domaines.</p>
+								</div>
+								<div class='block'>
+									<div class='video'>
+									    <a href='http://player.vimeo.com/video/95867692?autoplay=1' 
+											 class='lightview'
+											 data-lightview-type="iframe"
+											 data-lightview-options="
+												 width: 864, 
+												 height: 480, 
+												 viewport: 'scale'"
+											 data-lightview-title="Navigation" 
+											 data-lightview-caption="Lightview has mobile-friendly side buttons and pagination for easy navigation.">
+											 <img src="../images/thumbnails/guided-tour.png" alt=""/>
+										</a>
 									</div>
-									<div class="row half">
-										<div class="4u">
-											<a href="http://flypixel.com/44-shades-of-free-icons/8268508056006318" class="image image-full"><img src="images/4.jpg" alt=""></a>
-										</div>
-										<div class="4u">
-											<a href="http://flypixel.com/flip-clock/3655053956026317" class="image image-full"><img src="images/5.jpg" alt=""></a>
-										</div>
-										<div class="4u">
-											<a href="http://flypixel.com/dropdown/5290304620795313" class="image image-full"><img src="images/6.jpg" alt=""></a>
-										</div>
+									<p>La première vidéo montre CityBird dans son stade le plus avancé, offrant ainsi diverses fonctionnalités, mais dans un environnement de développement. La seconde vidéo montre un exemple de cette même application, un peu plus ancienne, mais dans le cadre cible d'une ville virtuelle 3D.</p>
+
+									<p>On peut également apercevoir dans cette dernière, une fonctionnalité nommée <i>Growing Buildings</i> permettant de s'implifier le modèle 3D de la ville quand la caméra prend de l'altitude.</p>
+								</div>
+								<div id="separator"><img src="../images/separator.png" alt=""/></div>
+								<h3>Transition entre Carte 2D et Environnement Virtuel 3D Urbain</h3>
+								<div class='block'>
+									<div class='video'>
+									    <a href='http://player.vimeo.com/video/95867690?autoplay=1' 
+											 class='lightview'
+											 data-lightview-type="iframe"
+											 data-lightview-options="
+												 width: 864, 
+												 height: 480, 
+												 viewport: 'scale'"
+											 data-lightview-title="Transition entre Carte 2D et Environnement Virtuel 3D Urbain" 
+											 data-lightview-caption="">
+											 <img src="../images/thumbnails/2dto3d.png" alt=""/>
+										</a>
 									</div>
-									<div class="row half">
-										<div class="4u">
-											<a href="http://flypixel.com/pie-charts/1759361594616314" class="image image-full"><img src="images/7.jpg" alt=""></a>
-										</div>
-										<div class="4u">
-											<a href="http://flypixel.com/sliding-selector-bar/7042935581006315" class="image image-full"><img src="images/8.jpg" alt=""></a>
-										</div>
-										<div class="4u">
-											<a href="http://flypixel.com/dark-as-hell-ui/5418809286006313" class="image image-full"><img src="images/9.jpg" alt=""></a>
-										</div>
-									</div>
-									<div class="row half">
-										<div class="4u">
-											<a href="http://flypixel.com/cityscape/9803996277226316" class="image image-full"><img src="images/10.jpg" alt=""></a>
-										</div>
-										<div class="4u">
-											<a href="http://flypixel.com/dropdown/8259263378026313" class="image image-full"><img src="images/11.jpg" alt=""></a>
-										</div>
-										<div class="4u">
-											<a href="http://flypixel.com/wood-ui-kit/3574765984616310" class="image image-full"><img src="images/12.jpg" alt=""></a>
-										</div>
-									</div>
-									<div class="row half">
-										<div class="4u">
-											<a href="http://flypixel.com/upload-button/9737964647895311" class="image image-full"><img src="images/13.jpg" alt=""></a>
-										</div>
-										<div class="4u">
-											<a href="http://flypixel.com/collapsible-menunavigation/5743165610406316" class="image image-full"><img src="images/14.jpg" alt=""></a>
-										</div>
-										<div class="4u">
-											<a href="http://flypixel.com/3d-button/5506786525606318" class="image image-full"><img src="images/15.jpg" alt=""></a>
-										</div>
-									</div>
-								</section>-->
+									<p>Ici sont présentées plusieurs idées afin de faciliter la compréhension et de limiter la charge cognitive lors de la transition d'une carte 2D vers un environnement virtuel 3D urbain.</p>
+									<p>Y sont présenter notamment le <i>Mantra</i>, une fenêtre permettant de prévisualiser les points importants avant d'effectuer la transition. Mais aussi les <i>Growing Buildings</i>, permettant un allégement des données 3D de façon momentané, afin de mieux situer les points de repère durant la transition.</p>
+								</div>
 							</article>
 
 
 							<!-- Publication -->
 							<article id="publication" class="panel">
-								<h2>Publication</h2>
+								<h2>Publications</h2>
+
+								<p>
+									Ici se trouvent mes publications reliées au sujet de l'intéraction Homme-Machine, réalisées dans le cadre des activités de l'équipe de recheche <a href="https://team.inria.fr/potioc/fr/">Potioc</a> à <a href="http://www.inria.fr/centre/bordeaux">INRIA Bordeaux Sud-Ouest</a>.
+								</p>
+
+
+								<div id="separator"><img src="../images/separator.png" alt=""/></div>
+								<h3>Articles &amp; Conférences</h3>
+								
+								<div class="block">
+									<div class="img">
+										<a href="../papers/3DUI2014.pdf"><img src="../images/papers/3DUI2014.png" alt=""></a>
+									</div>
+									<div class="text">
+									<p>Nous avons mené une étude utilisateurs, visant à caractériser en termes d'efficatité et d'utilisabilité, les différentes techniques d'interaction couramment utilisées en environnement virtuel 3D urbain, sur mobiles tactiles.
+									Cette étude à concisté à comparer quatre approches, à savoir : Le Go-To, les Joysticks virtuels, le Slide-Grab et enfin une technique basée sur une navigation nodale.</p>
+									<p>Les résultats suggèrent le Go-To comme étant la technique de navigation la plus performante. Les commentaires des utilisateurs non experts tendent à également promouvoir le Go-To en terme de facilité d'utilisation, alors que les utilisateurs experts semblent éprouver plus de facilité avec l'approche à base de Joysticks virtuels.</p>
+									<p><a href="http://thomashulin.github.io/papers/3DUI2014.pdf">Article</a> et vidéo publiés lors du <b><i>9th International IEEE Symposium on 3D User Interfaces</i></b> (<a href="http://3dui.org/">3DUI'14</a>), Minneapolis, USA, 2014.</p>
+									<p>Le logiciel ayant été développé pour cette étude est disponible sur notre site <a href="http://3dit.bordeaux.inria.fr/content.html">3DIT</a>.</p>
+									</div>
+								</div>
+
+								<div id="separator"><img src="../images/separator.png" alt=""/></div>
+								<h3>Autres</h3>
+								
+								<div class="block">
+									<div class="img">
+										<a href="../papers/3DNavSurvey.pdf"><img src="../images/papers/StateOfArt.png" alt=""></a>
+									</div>
+									<div class="text">
+									<p>Ce document fait état des techniques d'interaction les plus usitées dans des environnements virtuels 3D urbains. Il a été rédigé en fin d'année de Master 2, dans le cadre d'un stage réalisé au sein de l'équipe <a href="https://team.inria.fr/potioc/fr/">Potioc</a> à <a href="http://www.inria.fr/centre/bordeaux">INRIA Bordeaux Sud-Ouest</a>. On y retrouve, en premier lieu, un résumé rapide visant à expliquer ce qu'est une technique d'interaction 3D. Avec notamment des précisions sur les composantes motrice et cognitive nécaisserent au bon fonctionne de cette dernière.</p>
+									<p>S'en suit une liste décrivant chacune des différentes techniques étudiées, avec le détail de leurs fonctionnements.</p>
+									<p>Enfin, ce document se clôture sur une analyse succinte visant à extraire les méthodes récurrentes et points communs rencontrés.</p>
+									</div>
+								</div>
 							</article>
 
 							<!-- About -->
 							<article id="about" class="panel">
-								<h2>About me</h2>
+								<h2>About Me</h2>
+								<div id="separator"><img src="../images/separator.png" alt=""/></div>
+								<div id="me">
+									<p>Je m'appelle <a href="../papers/cv-thulin.pdf">Thomas Hulin</a>, je suis aujourd'hui <b>ingénieur de recherche</b> dans l'équipe <a href="https://team.inria.fr/potioc/fr/">Potioc</a>, d'<a href="http://www.inria.fr/centre/bordeaux">INRIA Bordeaux Sud-Ouest</a>. Cette équipe a pour sujet central l'interaction entre l'Homme et la Machine, et plus particulièrement l'interaction dans le cadre d'environnement virtuel 3D. J'interviens actuellement comme ingénieur, pour le maintient et développement d'applications 3D, mais également comme chercheur, dans le but d'apporter des solutions nouvelles à des problèmes rencontrés en matière d'interaction et d'affichage 3D.</p>
+
+									<p>Je me suis découvert cette passion pour le <b><i>computer graphics</i></b> au fil des années.  Initialement en IUT génie mécanique, puis banquier, j'ai finalement décidé de reprendre mes études afin de devenir un professionnel dans cette branche spécifique de l'informatique. Aujourd'hui titulaire d'un <b>Master 2 Informatique</b> avec Mention, <b>spécialité Image 3D</b>, j'entends continuer à monter en compétence dans ce domaine qui sucite chez moi tant d'intéret.</p>
+								</div>
+								
+								<div class='cv'>
+									<a href="../papers/cv-thulin.pdf">
+										<img src="../images/papers/cv-thulin-thumb.jpg" class="cv_img"/>
+									</a>
+								</div>
+
+								<div id="separator"><img src="../images/separator.png"/></div>
+								<div id="map_canvas"></div>
+								<div id="site">
+									<h5>Currently</h5>
+									<ul>
+										<li>75 Rue Bourges
+											<br>Résidence CHIRICO, Appt 17
+											<br>33400 Talence, France</li>
+									</ul>
+									<h5>Lieux précédents</h5>
+									<ul>
+										<li>Paris 12e arrondissement (75), France
+										<li>St Quentin (02), France
+										<li>Reims (51), France
+									</ul>
+
+									<h5>Me contacter</h5>
+									<ul>
+										<li><font color="#81BEF7">thomashulin.pro@gmail.com</font>
+									</ul>
+								</div>
 							</article>
-
-						<!-- Email 
-							<article id="email" class="panel">
-								<header>
-									<h2>Email Me</h2>
-								</header>
-								<form action="#" method="post">
-									<div>
-										<div class="row half">
-											<div class="6u">
-												<input type="text" class="text" name="name" placeholder="Name" />
-											</div>
-											<div class="6u">
-												<input type="text" class="text" name="email" placeholder="Email" />
-											</div>
-										</div>
-										<div class="row half">
-											<div class="12u">
-												<input type="text" class="text" name="subject" placeholder="Subject" />
-											</div>
-										</div>
-										<div class="row half">
-											<div class="12u">
-												<textarea name="message" placeholder="Message"></textarea>
-											</div>
-										</div>
-										<div class="row">
-											<div class="12u">
-												<input type="submit" class="button" value="Send Message" />
-											</div>
-										</div>
-									</div>
-								</form>
-							</article>-->
-
 					</div>
 		
 				<!-- Footer -->
 					<div id="footer">
 						<ul class="links">
-							<li>&copy; Jane Doe</li>
-							<li>Images : <a href="http://fotogrph.com/">fotogrph</a></li>
-							<li>Design : <a href="http://html5up.net/">HTML5 UP</a></li>
+							<li>&copy; <a href="http://thomashulin.github.io/en/#about">Thomas Hulin</a></li>
+							<li>Images &amp; Vidéos : <a href="#http://thomashulin.github.io/en/#about">Thomas Hulin</a></li>
+							<li>Design Original: <a href="http://html5up.net/">HTML5 UP</a></li>
 						</ul>
 					</div>
 		
