@@ -475,7 +475,6 @@
 
 	#publication .block
 	{
-		text-indent:1em;
 		color: #2E2E2E;
 		display:block;
 		height:100%;
@@ -497,6 +496,7 @@
 			#publication .block .text
 			{
 				display:inline-block;
+				text-indent:1em;
 				float: right;
 				text-align:justify;
 				width: 75%;
